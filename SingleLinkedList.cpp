@@ -24,4 +24,17 @@ public:
         Node *nodeBaru = new Node;
         nodeBaru->noMhs = nim;
 
-       
+        if (START == NULL || nim < START->noMhs) {
+            if (START != NULL && nim == START->noMhs) {
+                cout << "\nNomor Mahasiswa tidak diijinkan\n";
+                return;
+            }
+            nodeBaru->next = START;
+            START = nodeBaru;
+            return;
+        }
+
+        Node *previous = START;
+        Node *current = START;
+
+ 
