@@ -112,4 +112,18 @@ int main() {
         cout << "4. Mencari data dalam list" << endl;
         cout << "5. Keluar" << endl;
 
- 
+        cout << "\nMasukkan pilihan (1-5): ";
+        cin >> ch;
+
+        switch (ch) {
+        case '1':
+            mhsList.addNode();
+            break;
+
+        case '2':
+            if (mhsList.listEmpty()) {
+                cout << "\nList Kosong" << endl;
+                break;
+            }
+            cout << "\nMasukkan nomor mahasiswa yang akan dihapus: ";
+            cin >> nim;
